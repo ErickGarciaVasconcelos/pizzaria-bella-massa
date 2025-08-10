@@ -1,0 +1,147 @@
+/* ===== Reset básico ===== */
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;color:#333;background:#fff8f2}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+
+/* ===== Paleta / tokens ===== */
+:root{
+  --brand:#3ef806; /* CTA (tomate) */
+  --accent:#c97515; /* títulos */
+  --text:#333;
+  --muted:#6b7280;
+  --card:#fff;
+  --radius:14px;
+  --shadow:0 8px 28px rgba(0,0,0,.12);
+  --container:1180px;
+}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+.page{padding-top:72px}
+.center{text-align:center}
+.hint{color:var(--muted);font-size:.95rem}
+.lead{color:#444}
+.meta{color:#555;font-size:.95rem}
+
+/* ===== Header/Navegação ===== */
+.header::before{ content:""; position:absolute; inset:0; background:rgba(255,255,255,0.0); pointer-events: none;}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent),#ff8b72);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1.2rem}
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-links a{padding:8px 0}
+.btn.cta-mini{background:#1fce19;color:#111;padding:8px 14px;border-radius:999px;box-shadow:var(--shadow);font-weight:700}
+.burger{display:none;border:0;background:transparent;font-size:28px;cursor:pointer}
+
+/* Sobreposição por trás do header (para legibilidade sobre imagens) */
+.header::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,0.0)}
+
+/* ===== Hero ===== */
+.hero{position:relative;background:
+  linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.25)),
+  url('') center/cover no-repeat;
+  color:#fff;
+}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;align-items:center;padding:52px 20px 68px}
+/* Remova o background antigo da .hero-imagem */
+.hero-imagem{
+  min-height:auto; /* não precisa do min-height quando usa <img> */
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden; /* arredonda a imagem corretamente */
+}
+.hero-imagem img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.hero-texto h1{font-size:clamp(1.9rem,4.5vw,3rem);margin:0 0 12px;color:#fff}
+.hero-texto p{margin:0 0 16px;color:#f3f4f6}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Botões */
+.btn{display:inline-block;border:0;cursor:pointer}
+.cta{background:var(--brand);color:#fff;padding:12px 18px;border-radius:12px;box-shadow:var(--shadow);font-weight:700}
+.cta-sec{background:#111;color:#fff;padding:12px 18px;border-radius:12px;box-shadow:var(--shadow);font-weight:700}
+
+/* ===== Benefícios ===== */
+.beneficios{padding:56px 20px}
+.beneficios h2{color:var(--accent);margin:0 0 14px}
+.beneficios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.beneficio{background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);text-align:center}
+.beneficio .icon{font-size:28px;margin-bottom:6px}
+
+/* ===== Cardápio / Destaques ===== */
+.cardapio{padding:56px 20px}
+.cardapio h2{color:var(--accent);margin:0 0 6px}
+.cardapio .sub{color:var(--muted);margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pizza{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.thumb{aspect-ratio:16/10;object-fit:cover;width:100%}
+.pizza-body{padding:14px;display:flex;flex-direction:column;gap:8px}
+.pizza h3{margin:0;color:#111}
+.pizza p{margin:0;color:#444}
+.preco{color:#111}
+.pedido-btn{background:#3ef806;color:#111;padding:8px 14px;border-radius:999px;box-shadow:var(--shadow);font-weight:700}
+
+/* ===== Promoção ===== */
+.promo{background:linear-gradient(135deg,var(--brand),#ff8b72);color:#fff}
+.promo-box{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:26px 20px}
+.promo h2{margin:0 0 6px}
+
+/* ===== Como pedir ===== */
+.etapas{padding:56px 20px}
+.etapas h2{color:var(--accent);margin:0 0 10px}
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.steps li{background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px}
+.steps span{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:999px;background:#111;color:#fff;font-weight:700}
+
+/* ===== Depoimentos ===== */
+.depoimentos{padding:56px 20px}
+.depoimentos h2{color:var(--accent)}
+.depo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.depo{background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.depo blockquote{margin:0 0 8px;line-height:1.6}
+
+/* ===== Entrega & horários ===== */
+.entrega{padding:56px 20px}
+.entrega h2{color:var(--accent)}
+.entrega-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.lista{margin:8px 0 0 18px}
+
+/* ===== FAQ ===== */
+.faq{padding:56px 20px}
+.faq h2{color:var(--accent)}
+.faq details{background:var(--card);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
+.faq details+details{margin-top:10px}
+.faq summary{cursor:pointer;font-weight:700}
+
+/* ===== Contato ===== */
+.contato{padding:56px 20px}
+.contato h2{color:var(--accent)}
+.contato-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}
+.mapa iframe{border-radius:var(--radius);box-shadow:var(--shadow)}
+
+/* ===== Footer ===== */
+.footer{padding:28px 20px;text-align:center;color:#666}
+
+/* ===== Responsividade ===== */
+@media (max-width: 992px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .beneficios-grid{grid-template-columns:1fr 1fr}
+  .depo-grid{grid-template-columns:1fr}
+  .entrega-grid{grid-template-columns:1fr}
+  .contato-grid{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr}
+}
+@media (max-width: 720px){
+  .grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .nav-links{position:absolute;top:72px;left:20px;right:20px;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-radius:14px;padding:12px;gap:12px;display:none;flex-direction:column;box-shadow:var(--shadow)}
+  .nav-links a{color:#111}
+  .nav-links.open{display:flex}
+  .burger{display:block;color:#111}
+  .header{background:#fff}
+}

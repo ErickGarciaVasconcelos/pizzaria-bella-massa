@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pizzaria Bella Massa · A verdadeira pizza brasileira</title>
+  <meta name="description" content="Pizzaria Bella Massa — ingredientes frescos, combos e delivery rápido. Peça agora pelo WhatsApp!" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/css/bella.css" />
+  <link rel="icon" href="/favicon.ico" />
+  <script src="/js/bella.js" defer></script>
+</head>
+<body>
+
+  <!-- Header/Navegação -->
+  <header class="header">
+    <div class="container nav">
+      <a href="#inicio" class="logo" aria-label="Início">Bella Massa</a>
+      <button class="burger" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+      <nav class="nav-links" id="menu">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#promocoes">Promoções</a>
+        <a href="#como-pedir">Como pedir</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#entrega">Entrega & Horários</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn cta-mini" href="https://wa.me/5511999999999?text=Ol%C3%A1,%20quero%20fazer%20um%20pedido!" target="_blank" rel="noopener">Pedir no WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page" id="inicio">
+    <!-- Hero (primeira dobra) -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-texto">
+          <h1>A verdadeira pizza brasileira</h1>
+          <p>Ingredientes frescos, massa leve e aquele toque caseiro irresistível. Delivery rápido para matar sua fome!</p>
+          <div class="hero-ctas">
+            <a class="btn cta" href="#cardapio">Ver cardápio</a>
+          </div>
+        </div>
+        <div class="hero-imagem" role="img" aria-label="Pizza apetitosa sobre tábua de madeira">
+  <img src="/pizza-pizza-cheia-de-tomates-salame-e-azeitonas.jpg" alt="Pizza apetitosa sobre tábua de madeira" loading="eager" width="1200" height="800">
+</div>
+
+      </div>
+    </section>
+
+    <!-- Proposta de valor / Benefícios -->
+    <section class="container beneficios" aria-labelledby="t-beneficios">
+      <h2 id="t-beneficios">Por que escolher a Bella Massa</h2>
+      <div class="beneficios-grid">
+        <article class="beneficio">
+          <div class="icon">🥦</div>
+          <h3>Ingredientes frescos</h3>
+          <p>Selecionamos fornecedores locais e preparamos tudo no dia.</p>
+        </article>
+        <article class="beneficio">
+          <div class="icon">🚀</div>
+          <h3>Entrega rápida</h3>
+          <p>Quentinha na sua casa em poucos minutos na região.</p>
+        </article>
+        <article class="beneficio">
+          <div class="icon">🔥</div>
+          <h3>Forno na temperatura certa</h3>
+          <p>Casquinha crocante por fora, macia por dentro. Do jeitinho certo.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Cardápio / Destaques -->
+    <section id="cardapio" class="container cardapio" aria-labelledby="t-cardapio">
+      <h2 id="t-cardapio">Sabores em destaque</h2>
+      <p class="sub">Pequena (4 fatias) · Média (6) · Grande (8)</p>
+
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="pizza">
+          <img src="/cozinha-mundial-com-comida-deliciosa.jpg" alt="Pizza Margherita" class="thumb" />
+          <div class="pizza-body">
+            <h3>Margherita</h3>
+            <p>Molho de tomate, mussarela, manjericão e azeite extra virgem.</p>
+            <div class="preco">a partir de <strong>R$ 39,90</strong></div>
+            <button class="btn pedido-btn" data-sabor="Margherita">Pedir este sabor</button>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="pizza">
+          <img src="/pizza-de-calabresa-em-cima-da-mesa.jpg" alt="Calabresa" class="thumb" />
+          <div class="pizza-body">
+            <h3>Calabresa</h3>
+            <p>Calabresa fatiada, cebola roxa, azeitonas e orégano.</p>
+            <div class="preco">a partir de <strong>R$ 42,90</strong></div>
+            <button class="btn pedido-btn" data-sabor="Calabresa">Pedir este sabor</button>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="pizza">
+          <img src="/pexels-pedrofurtadoo-31450857.jpg" alt="Frango com Catupiry" class="thumb" />
+          <div class="pizza-body">
+            <h3>Frango com Catupiry</h3>
+            <p>Frango desfiado, catupiry original e toque de cheiro‑verde.</p>
+            <div class="preco">a partir de <strong>R$ 46,90</strong></div>
+            <button class="btn pedido-btn" data-sabor="Frango com Catupiry">Pedir este sabor</button>
+          </div>
+        </article>
+      </div>
+
+      <p class="center"><a class="btn cta" href="https://wa.me/5511999999999?text=Ol%C3%A1,%20me%20envie%20o%20card%C3%A1pio%20completo" target="_blank" rel="noopener">Ver cardápio completo no WhatsApp</a></p>
+    </section>
+
+    <!-- Promoção da semana -->
+    <section id="promocoes" class="promo">
+      <div class="container promo-box">
+        <div class="promo-texto">
+          <h2>Promoção da semana</h2>
+          <p>🍕 Grande + Refrigerante 1,5L por <strong>R$ 49,90</strong>. Válida de seg a qui, retirada no balcão.</p>
+        </div>
+        <a class="btn cta" href="https://wa.me/5511999999999?text=Quero%20a%20promo%C3%A7%C3%A3o%20da%20semana!" target="_blank" rel="noopener">Garantir agora</a>
+      </div>
+    </section>
+
+    <!-- Como pedir -->
+    <section id="como-pedir" class="container etapas" aria-labelledby="t-pedir">
+      <h2 id="t-pedir">Como fazer seu pedido</h2>
+      <ol class="steps">
+        <li><span>1</span> Escolha o sabor favorito.</li>
+        <li><span>2</span> Clique em "Pedir este sabor".</li>
+        <li><span>3</span> Confirme no WhatsApp e pronto!</li>
+      </ol>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="container depoimentos" aria-labelledby="t-depo">
+      <h2 id="t-depo">O que nossos clientes dizem</h2>
+      <div class="depo-grid">
+        <figure class="depo">
+          <blockquote>“A melhor pizza do bairro! Sempre quentinha.”</blockquote>
+          <figcaption>— Ana M.</figcaption>
+        </figure>
+        <figure class="depo">
+          <blockquote>“Entrega rápida e massa perfeita. Recomendo!”</blockquote>
+          <figcaption>— Carlos T.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Entrega & horários -->
+    <section id="entrega" class="container entrega" aria-labelledby="t-entrega">
+      <h2 id="t-entrega">Entrega & horários</h2>
+      <div class="entrega-grid">
+        <div>
+          <h3>Horários</h3>
+          <ul class="lista">
+            <li>Seg–Qui: 18h às 23h</li>
+            <li>Sex–Sáb: 18h às 00h</li>
+            <li>Dom: 18h às 22h</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Regiões atendidas</h3>
+          <p>Centro, Jardim das Flores, Vila Nova, Morumbi e arredores.</p>
+          <p class="hint">Taxa de entrega calculada no WhatsApp pelo CEP.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="container faq" aria-labelledby="t-faq">
+      <h2 id="t-faq">Perguntas frequentes</h2>
+      <details>
+        <summary>Quais tamanhos vocês têm?</summary>
+        <p>Pequena (4), Média (6) e Grande (8 fatias).</p>
+      </details>
+      <details>
+        <summary>Formas de pagamento?</summary>
+        <p>Pix, dinheiro e cartões (crédito/débito).</p>
+      </details>
+      <details>
+        <summary>Metade a metade?</summary>
+        <p>Sim! Consulte valores e combinações pelo WhatsApp.</p>
+      </details>
+    </section>
+
+    <!-- Contato / Localização -->
+    <section id="contato" class="container contato" aria-labelledby="t-contato">
+      <h2 id="t-contato">Contato</h2>
+      <div class="contato-grid">
+        <div>
+          <p class="lead">Fale com a gente no WhatsApp e receba seu pedido rapidinho.</p>
+          <a class="btn cta" href="https://wa.me/5511999999999?text=Ol%C3%A1,%20quero%20fazer%20um%20pedido!" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+          <p class="meta">Telefone: (11) 99999‑9999</p>
+          <p class="meta">Endereço: Rua das Pizzas, 123 – Seu Bairro</p>
+        </div>
+        <div class="mapa">
+          <iframe title="Mapa da Pizzaria Bella Massa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.999999!2d-46.6339999!3d-23.5559999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x000000000000000%3APizzaria!2sPizzaria!5e0!3m2!1spt-BR!2sBR!4v0000000000000"
+            width="100%" height="260" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Pizzaria Bella Massa — Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
